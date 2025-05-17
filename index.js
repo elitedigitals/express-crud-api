@@ -5,17 +5,12 @@ import itemRoutes from "./routes/items.js";
 const app =express();
 const PORT = 7000;
 
-// app.use(express.json());
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
 //items route
 app.use("/items",itemRoutes);
-
-
-
-
-
 
 app.get('/', (req, res)=>{
     res.send("hello world")
