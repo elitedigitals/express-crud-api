@@ -10,14 +10,14 @@ let items = [
 ]
 
 
-//get all items controller
+//all items logic
 export const getItems = (req, res)=>{
     res.send({items:items})
 }
 
 
 
-//create new item controller
+//create new item logic
 export const createItem = (req, res)=>{
 
     const {name, business, position, description} = req.body;
@@ -38,7 +38,7 @@ export const createItem = (req, res)=>{
 res.send('user added to array')
 }
 
-//get item by id controller
+//get item by id logic
 export const getItemById = (req, res) => {
     const id = parseInt(req.params.id);
     const foundItem = items.find(item => item.id === id);
@@ -51,7 +51,7 @@ export const getItemById = (req, res) => {
   };
   
 
-// delete item by id controller
+// delete item by id logic
 export const deleteItem = (req, res) => {
     const id = parseInt(req.params.id);
     const deletedItem = items.find(item => item.id === id);
