@@ -7,7 +7,6 @@ const PORT = 7000;
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true}));
-app.use(bodyParser.json());
 
 //items route
 app.use("/items",itemRoutes);
@@ -15,13 +14,6 @@ app.use("/items",itemRoutes);
 app.get('/', (req, res)=>{
     res.send("hello world")
 })
-
-
-app.post('/create', (req,res) =>{
-
-})
-
-
 
 
 
